@@ -6,61 +6,131 @@
   <title>ROASHOT | تواصل معنا</title>
 
   <style>
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background:#0e1033;
-      color:#ffffff;
+    :root{
+      --bg:#0e1033;          /* أزرق الهوية */
+      --gold:#d7c08a;        /* ذهبي قريب من الشعار */
+      --white:#ffffff;
     }
 
-    .wrap{
-      max-width:520px;
-      margin:0 auto;
-      padding:40px 18px;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      background:var(--bg);
+      color:var(--gold);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px;
       text-align:center;
     }
 
-    .logo{
-      max-width:260px;
+    .wrap{width:min(520px, 100%);}
+
+    /* دائرة الشعار بحد أبيض */
+    .logo-ring{
+      width:180px;
+      height:180px;
+      border:3px solid var(--white);
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 18px;
+      overflow:hidden;
+      background:transparent;
+    }
+    .logo-ring img{
       width:100%;
-      margin:0 auto 24px;
+      height:100%;
+      object-fit:cover;
       display:block;
     }
 
-    h1{
+    .handle{
       font-size:22px;
-      margin-bottom:18px;
-      letter-spacing:2px;
+      letter-spacing:1px;
+      margin:0 0 26px;
+      direction:ltr; /* عشان @ يكون مضبوط */
+      unicode-bidi: plaintext;
+      opacity:.95;
     }
 
+    .line{
+      font-size:34px;
+      font-weight:500;
+      margin:0 0 18px;
+    }
+
+    .small{
+      font-size:30px;
+      margin:0 0 18px;
+      opacity:.95;
+    }
+
+    .tiny{
+      font-size:28px;
+      margin:0 0 26px;
+      opacity:.9;
+    }
+
+    .for-order{
+      font-size:26px;
+      margin:0 0 22px;
+      opacity:.95;
+    }
+
+    /* زر واتساب: مستطيل + حدود بيضاء + خلفية نفس لون الشعار */
     .btn{
-      display:inline-block;
-      padding:14px 26px;
-      border-radius:16px;
-      background:#000;
-      color:#fff;
+      display:block;
+      width:min(520px, 100%);
+      margin:0 auto;
+      padding:18px 22px;
+      border-radius:22px;
+      border:2px solid var(--white);
+      background:transparent; /* نفس لون الخلفية */
+      color:var(--gold);      /* نفس لون نص الشعار */
       text-decoration:none;
-      font-size:16px;
-      margin-top:10px;
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
     }
+    .btn:active{transform:scale(.99)}
 
-    .btn:hover{
-      opacity:0.9;
+    /* مسافات أفضل بالموبايل */
+    @media (max-width:420px){
+      .logo-ring{width:160px;height:160px}
+      .line{font-size:30px}
+      .small{font-size:26px}
+      .tiny{font-size:24px}
+      .btn{font-size:24px}
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+  <main class="wrap">
 
-    <!-- الشعار -->
-    <img src="IMG_2681.jpeg" alt="ROASHOT Logo" class="logo">
+    <!-- غيّر اسم الصورة لو مختلف -->
+    <div class="logo-ring">
+      <img src="IMG_2681.jpeg" alt="ROASHOT Logo">
+    </div>
 
-    <!-- زر التواصل -->
-    <a class="btn" href="https://wa.me/96555563914" target="_blank">
-      تواصل معنا
-    </a>
+    <p class="handle">@roashot.kw</p>
 
-  </div>
+    <h1 class="line">Catering Coffee</h1>
+    <p class="small">Est.2026</p>
+    <p class="tiny">Kuwait</p>
+
+    <p class="for-order">For Order ⬇️</p>
+
+    <a class="btn"
+       href="https://wa.me/96555563914"
+       rel="nofollow noopener"
+       target="_blank">WHAT'S APP</a>
+
+  </main>
 </body>
 </html>
