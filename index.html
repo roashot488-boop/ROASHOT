@@ -1,121 +1,97 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ROASHOT | Coffee Catering</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ROASHOT</title>
 
-  <style>
-    :root{
-      --bg:#f6eddc;     /* لون الخلفية */
-      --ink:#0e1033;    /* الأزرق الغامق */
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6eddc; /* خلفية بيج */
+    color: #0b1238;      /* أزرق غامق */
+    text-align: center;
+  }
 
-    *{box-sizing:border-box}
+  .container {
+    padding: 60px 20px;
+  }
 
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: var(--bg);
-      color: var(--ink);
-      text-align:center;
-    }
+  /* شعار أعلى الصفحة */
+  .logo {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 18px;
+  }
 
-    .wrap{
-      max-width:420px;
-      margin:0 auto;
-      padding:36px 18px 48px;
-    }
+  .handle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
 
-    /* الشعار العلوي */
-    .logo-wrap{
-      width:180px;
-      height:180px;
-      margin:0 auto 18px;
-      border-radius:999px;
-      border:3px solid var(--ink);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-    .logo-wrap img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+  h1 {
+    font-size: 34px;
+    margin: 10px 0;
+  }
 
-    .handle{
-      font-size:18px;
-      margin:14px 0 20px;
-      letter-spacing:.5px;
-      font-weight:600;
-    }
+  .text {
+    font-size: 22px;
+    margin: 8px 0;
+  }
 
-    .title{
-      font-size:26px;
-      font-weight:500;
-      margin:6px 0;
-    }
+  .order {
+    margin: 24px 0;
+    font-size: 20px;
+  }
 
-    .sub{
-      font-size:18px;
-      margin:6px 0;
-    }
+  /* زر واتساب */
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 40px;
+    border: 2px solid #0b1238;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #0b1238;
+    font-size: 22px;
+    font-weight: 600;
+  }
 
-    .arrow{
-      margin:22px 0 14px;
-      font-size:18px;
-    }
-
-    /* زر واتساب */
-    .btn{
-      display:flex;
-      flex-direction:row-reverse; /* الأيقونة يسار */
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      margin:0 auto;
-      padding:14px 26px;
-      max-width:260px;
-      border-radius:16px;
-      border:2px solid var(--ink);
-      color:var(--ink);
-      text-decoration:none;
-      font-size:20px;
-      font-weight:600;
-    }
-
-    .btn svg{
-      width:28px;     /* تكبير الأيقونة */
-      height:28px;
-      fill:var(--ink);
-      flex-shrink:0;
-    }
-  </style>
+  /* أيقونة واتساب (بدون دائرة) */
+  .whatsapp-icon {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+</style>
 </head>
 
 <body>
-  <div class="wrap">
+  <div class="container">
 
     <!-- الشعار -->
-    <div class="logo-wrap">
-      <img src="IMG_2681.jpeg" alt="ROASHOT Logo">
-    </div>
+    <img src="IMG_2681.jpeg" class="logo" alt="ROASHOT Logo" />
 
     <div class="handle">@roashot.kw</div>
 
-    <div class="title">Catering Coffee</div>
-    <div class="sub">Est.2026</div>
-    <div class="sub">Kuwait</div>
+    <h1>Catering Coffee</h1>
+    <div class="text">Est.2026</div>
+    <div class="text">Kuwait</div>
 
-    <div class="arrow">⬇ For Order</div>
+    <div class="order">For Order ⬇️</div>
 
     <!-- زر واتساب -->
-    <a class="btn" href="https://wa.me/96555563914" target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M19.11 17.31c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.66.29 1.17.46 1.57.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.27.23-.61.23-1.14.16-1.25-.07-.11-.25-.18-.52-.32z"/>
+    <a class="whatsapp-btn" href="https://wa.me/965XXXXXXXX" target="_blank">
+      <!-- أيقونة واتساب مكبرة بدون دائرة -->
+      <svg class="whatsapp-icon" viewBox="0 0 32 32">
+        <path d="M16.003 2.003c-7.732 0-14 6.268-14 14 0 2.468.646 4.88 1.873 7.006L2 30l7.187-1.854A13.94 13.94 0 0 0 16.003 30c7.732 0 14-6.268 14-14s-6.268-13.997-14-13.997zm0 25.497c-2.14 0-4.24-.563-6.073-1.63l-.435-.25-4.267 1.1 1.137-4.156-.28-.426a11.48 11.48 0 0 1-1.78-6.138c0-6.35 5.167-11.517 11.518-11.517 6.35 0 11.517 5.167 11.517 11.517s-5.167 11.517-11.517 11.517zm6.32-8.654c-.345-.173-2.04-1.007-2.356-1.123-.316-.115-.547-.173-.777.173-.23.345-.893 1.123-1.094 1.353-.2.23-.403.259-.748.087-.345-.173-1.457-.537-2.774-1.713-1.025-.913-1.716-2.04-1.917-2.385-.2-.345-.021-.531.152-.704.156-.155.345-.403.517-.604.173-.2.23-.345.345-.575.115-.23.057-.431-.029-.604-.087-.173-.777-1.87-1.065-2.56-.28-.673-.565-.582-.777-.593l-.662-.012c-.23 0-.604.087-.92.431-.316.345-1.208 1.18-1.208 2.878s1.237 3.343 1.41 3.573c.173.23 2.437 3.72 5.91 5.218.826.356 1.47.569 1.973.728.829.264 1.585.227 2.18.138.665-.099 2.04-.833 2.327-1.64.288-.806.288-1.496.2-1.64-.086-.143-.316-.23-.66-.402z"/>
       </svg>
+
       WHAT’S APP
     </a>
 
