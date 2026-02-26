@@ -1,107 +1,120 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ROASHOT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROASHOT | Coffee Catering</title>
 
   <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(180deg, #0b0f3b 0%, #0a0d2e 100%);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
-      color: #d6c8a0;
-      text-align: center;
+    :root{
+      --bg:#f6eddc;          /* لون الخلفية الجديد (لون النص السابق) */
+      --ink:#0e1033;         /* لون النص الجديد (الأزرق الغامق) */
+      --accent:#0e1033;
     }
 
-    .container {
-      width: 100%;
-      max-width: 420px;
-      padding: 40px 20px;
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg);
+      color: var(--ink);
+      text-align:center;
     }
 
-    .logo {
-      width: 220px;
-      height: 220px;
-      margin: 0 auto 24px;
-      border-radius: 50%;
-      border: 3px solid #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: #0b0f3b;
+    .wrap{
+      max-width:420px;
+      margin:0 auto;
+      padding:36px 18px 48px;
     }
 
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    /* الشعار */
+    .logo-wrap{
+      width:180px;
+      height:180px;
+      margin:0 auto 18px;
+      border-radius:999px;
+      border:3px solid var(--ink);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .logo-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .handle {
-      font-size: 16px;
-      margin-bottom: 18px;
-      color: #d6c8a0;
+    .handle{
+      font-size:18px;
+      margin:14px 0 20px;
+      letter-spacing:.5px;
     }
 
-    .text {
-      font-size: 22px;
-      margin: 10px 0;
-      font-weight: 500;
-      color: #d6c8a0;
+    .title{
+      font-size:26px;
+      font-weight:500;
+      margin:6px 0;
     }
 
-    .text.small {
-      font-size: 18px;
+    .sub{
+      font-size:18px;
+      margin:6px 0;
     }
 
-    .arrow {
-      margin: 22px 0 26px;
-      font-size: 18px;
+    .arrow{
+      margin:22px 0 14px;
+      font-size:18px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 16px;
-      border: 2px solid #ffffff;
-      color: #d6c8a0;
-      text-decoration: none;
-      font-size: 18px;
-      letter-spacing: 2px;
-      transition: all 0.25s ease;
-      background: transparent;
+    /* زر واتساب */
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin:0 auto;
+      padding:14px 24px;
+      max-width:260px;
+      border-radius:16px;
+      border:2px solid var(--ink);
+      color:var(--ink);
+      text-decoration:none;
+      font-size:20px;
+      font-weight:500;
     }
 
-    .btn:hover {
-      background: rgba(255,255,255,0.08);
+    .btn svg{
+      width:22px;
+      height:22px;
+      fill:var(--ink);
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="wrap">
 
-    <div class="logo">
-      <!-- غيّر اسم الصورة إذا احتجت -->
+    <!-- الشعار -->
+    <div class="logo-wrap">
       <img src="IMG_2681.jpeg" alt="ROASHOT Logo">
     </div>
 
     <div class="handle">@roashot.kw</div>
 
-    <div class="text">Catering Coffee</div>
-    <div class="text small">Est.2026</div>
-    <div class="text small">Kuwait</div>
+    <div class="title">Catering Coffee</div>
+    <div class="sub">Est.2026</div>
+    <div class="sub">Kuwait</div>
 
     <div class="arrow">⬇ For Order</div>
 
-    <a class="btn" href="https://wa.me/96555563914" target="_blank">
-      WHAT'S APP
+    <!-- زر واتساب -->
+    <a class="btn" href="https://wa.me/96555563914" target="_blank" rel="noopener">
+      <svg viewBox="0 0 32 32">
+        <path d="M19.11 17.31c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.66.29 1.17.46 1.57.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.27.23-.61.23-1.14.16-1.25-.07-.11-.25-.18-.52-.32z"/>
+      </svg>
+      WHAT’S APP
     </a>
 
   </div>
